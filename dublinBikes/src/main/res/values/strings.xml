@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dublin Bikes</string>
+    <string name="app_name_screen">DublinBikes</string>
+    <string name="maps_api_key_debug">AIzaSyDEfPt9Q1rK7mprgOLLnU7FZNxLFha3Xgk</string>
+    <string name="maps_api_key">AIzaSyC-omFEda6h5VdizpQ7tlgXsfGs6B4ilCk</string>
+    <string name="i_want_a_bike">Take a bike</string>
+    <string name="i_want_to_leave_my_bike">Leave a bike</string>
+    <string name="show_me_map">The Map</string>
+    <string name="my_fav">My Bookmarks</string>
+    <string name="station_list">Station list</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="about">About</string>
+    <string name="bikes_no">No bike</string>
+    <string name="spot_no">No spots</string>
+    <string name="add_to_bookmark">Bookmarks</string>
+    <string name="server_update">Updated on server : %s</string>
+    <string name="server_update_today">Updated on server : Today at %s</string>
+    <string name="add_alert">Alert</string>
+    <string name="add_alert_title">Add an alert</string>
+    <string name="refresh">Refresh</string>
+    <string name="notif">Too late. There\'s no bike left.</string>
+    <string name="move_now">Move!</string>
+    <string name="nb_bikes">Min bike number</string>
+    <string name="nb_bikes_f">Min bike number : %d</string>
+    <string name="start">Start time</string>
+    <string name="end">End time</string>
+    <string name="start_f">Start time : %s</string>
+    <string name="end_f">End time : %s</string>
+    <string name="validate">Confirm</string>
+    <string name="select_start">Chose a starting hour</string>
+    <string name="select_end">Choose an ending hour</string>
+    <string name="fill_all">Please fill everything</string>
+    <string name="alert_success">Alert successfuly added</string>
+    <string name="send">Send</string>
+
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+
+	<string name="bike_zero">\nbike</string>
+	<string name="spot_zero">\nspot</string>
+    <string name="repeat">Repeat</string>
+    <string name="empty">No station to show.</string>
+    <string name="add_alert_help">Here you can add an alert for this specific station. Start and End time are for the alarm time-range.\nGive me a feedback ;)</string>
+    <string name="sorry_services">I\'m sorry but you can\'t use Dublin Bikes without Google Play Services.</string>
+    <plurals name="notif">
+        <item quantity="one">There is %d bike, move!</item>
+        <item quantity="other">There are %d bikes, easy win.</item>
+    </plurals>
+    <plurals name="alerts_nb">
+        <item quantity="other"> alerts, slide down to see</item>
+    </plurals>
+    <plurals name="bikes">
+        <item quantity="one">%02d\nbike</item>
+        <item quantity="few">%02d\nbikes</item>
+        <item quantity="many">%02d\nbikes</item>
+        <item quantity="other">%02d\nbikes</item>
+    </plurals>
+    <plurals name="spots">
+        <item quantity="one">%02d\nspot</item>
+        <item quantity="few">%02d\nspots</item>
+        <item quantity="many">%02d\nspots</item>
+        <item quantity="other">%02d\nspots</item>
+    </plurals>
+    <plurals name="bikes_available">
+        <item quantity="one">%02d bike available</item>
+        <item quantity="few">%02d bikes available</item>
+        <item quantity="many">%02d bikes available</item>
+        <item quantity="other">%02d bikes available</item>
+    </plurals>
+    <plurals name="free_spots">
+        <item quantity="one">%02d spot available</item>
+        <item quantity="few">%02d spots available</item>
+        <item quantity="many">%02d spots available</item>
+        <item quantity="other">%02d spots available</item>
+    </plurals>
+
+</resources>

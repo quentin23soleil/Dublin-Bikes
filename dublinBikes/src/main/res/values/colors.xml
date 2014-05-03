@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_opacity">#BB33b5e5</color>
+    <color name="white_opacity">#BBFFFFFF</color>
+    <color name="green_opacity">#BB009933</color>
+    <color name="green">#009933</color>
+    <color name="grey_transparent">#EEDDDDDD</color>;
+</resources>

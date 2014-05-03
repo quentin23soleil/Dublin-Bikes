@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        maven { url 'http://download.crashlytics.com/maven' }
+    }
+
+    dependencies {
+    }
+}
+apply plugin: 'android'
+repositories {
+    maven { url 'http://download.crashlytics.com/maven' }
+    maven { url 'http://repo1.maven.org/maven2' }
+}
+
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.0.3'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':discreetAppRate')
+    compile 'com.quentindommerc.superlistview:library:0.1'
+    compile 'com.doomonafireball.betterpickers:library:1.5.2'
+    compile 'com.loopj.android:android-async-http:1.4.4'
+    compile 'com.android.support:support-v4:+'
+    compile 'com.crashlytics.android:crashlytics:1.+'
+    compile 'com.google.android.gms:play-services:+'
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile files('libs/Parse-1.4.3.jar')
+}

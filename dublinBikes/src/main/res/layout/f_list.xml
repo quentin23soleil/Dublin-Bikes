@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:fitsSystemWindows="true"
+             android:clipToPadding="false"
+             android:layout_height="match_parent"
+             android:background="#EEE"
+             android:orientation="vertical" >
+
+
+    <com.quentindommerc.superlistview.SuperListview
+            xmlns:superlistview="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            superlistview:superlv__clipToPadding="false"
+            superlistview:superlv__divider="@android:color/transparent"
+            superlistview:superlv__dividerHeight="10dp"
+            superlistview:superlv__Padding="10dp"
+            superlistview:superlv__empty="@layout/emptyview"
+            superlistview:superlv__scrollbarStyle="outsideOverlay" >
+    </com.quentindommerc.superlistview.SuperListview>
+
+</FrameLayout>

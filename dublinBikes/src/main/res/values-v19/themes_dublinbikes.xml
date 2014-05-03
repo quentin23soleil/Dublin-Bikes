@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DublinBikes" parent="@style/_DublinBikes">
+
+        <item name="android:actionBarItemBackground">@drawable/selector_transparent_grey</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Dublinbikes</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Dublinbikes</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Dublinbikes</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Dublinbikes</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Dublinbikes</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_dublinbikes</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_dublinbikes</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Dublinbikes</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Dublinbikes.Widget</item>
+
+
+    </style>
+</resources>

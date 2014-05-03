@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Me :\nQuentin Dommerc\n(@kentin_dommerc on Twitter)"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Android Asynchronous Http Client (by Loopj)"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#DDD"
+            android:padding="10dp"
+            android:text="Copyright 2013 Loopj
+\n
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);\n
+you may not use this file except in compliance with the License.\n
+You may obtain a copy of the License at\n
+\n
+   http://www.apache.org/licenses/LICENSE-2.0\n
+\n
+Unless required by applicable law or agreed to in writing, software\n
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,\n
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n
+See the License for the specific language governing permissions and\n
+limitations under the License."
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="ActionBar-PullToRefresh (by chrisbanes)"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#DDD"
+            android:padding="10dp"
+            android:text="Copyright 2013 Chris Banes
+\n
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);\n
+you may not use this file except in compliance with the License.\n
+You may obtain a copy of the License at\n
+\n
+   http://www.apache.org/licenses/LICENSE-2.0\n
+\n
+Unless required by applicable law or agreed to in writing, software\n
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,\n
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n
+See the License for the specific language governing permissions and\n
+limitations under the License."
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Card Library (by gabrielemariotti)"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#DDD"
+            android:padding="10dp"
+            android:text="Copyright 2013 Gabriele Mariotti
+\n
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);\n
+you may not use this file except in compliance with the License.\n
+You may obtain a copy of the License at\n
+\n
+   http://www.apache.org/licenses/LICENSE-2.0\n
+\n
+Unless required by applicable law or agreed to in writing, software\n
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,\n
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n
+See the License for the specific language governing permissions and\n
+limitations under the License."
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="All icons and images are from iconfinder.com (modified a bit for some)"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</ScrollView>

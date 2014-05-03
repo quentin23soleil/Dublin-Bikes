@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.quentindommerc.dublinbikes"
+    android:versionCode="16"
+    android:versionName="2.0.3" >
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <permission android:protectionLevel="signature"
+                android:name="com.quentindommerc.dublinbikes.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.quentindommerc.dublinbikes.permission.C2D_MESSAGE" />
+
+    <permission
+        android:name="com.quentindommerc.dublinbikes.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.quentindommerc.dublinbikes.permission.MAPS_RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_cycle_white"
+        android:label="@string/app_name"
+        android:name=".base.DublinBikes"
+        android:debuggable="false"
+        android:theme="@style/DublinBikes" >
+        <receiver android:name="com.quentindommerc.dublinbikes.utils.DeleteNotification" >
+        </receiver>
+
+
+        <activity
+            android:name="com.quentindommerc.dublinbikes.activity.Home"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.quentindommerc.dublinbikes.activity.DetailStation" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.quentindommerc.dublinbikes.activity.Home" />
+        </activity>
+        <activity android:name="com.quentindommerc.dublinbikes.activity.AddAlert" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.quentindommerc.dublinbikes.activity.Home" />
+        </activity>
+
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+                  android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--
+                  IMPORTANT: Change "com.parse.starter" to match your app's package name.
+                -->
+                <category android:name="com.quentindommerc.dublinbikes" />
+            </intent-filter>
+        </receiver>
+
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/maps_api_key" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="187f4d09e4a79ce3ae37370099e151e74e2910e4"/>
+    </application>
+
+</manifest>

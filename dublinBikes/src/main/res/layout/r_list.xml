@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_whitecard_greycard"
+                android:layout_margin="10dp" >
+
+    <LinearLayout
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/spots_bike"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/station_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_pin"
+                android:textSize="18sp"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/spots_bike"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/spots_tv"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/ic_free_spot"/>
+
+        <View
+                android:layout_width="80dp"
+                android:layout_height="0.5dp"
+                android:background="#ccc"
+                android:id="@+id/divider"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/spots_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+        <TextView
+                android:id="@+id/bikes_tv"
+                android:layout_width="wrap_content"
+                android:drawableRight="@drawable/ic_cycle_small"
+                android:drawablePadding="5dp"
+                android:layout_alignRight="@+id/spots_tv"
+                android:layout_below="@+id/divider"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+    </RelativeLayout>
+
+</RelativeLayout>

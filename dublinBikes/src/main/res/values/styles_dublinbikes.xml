@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="Theme.Dublinbikes" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_dublinbikes</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Dublinbikes</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Dublinbikes</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Dublinbikes</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Dublinbikes</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Dublinbikes</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_dublinbikes</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_dublinbikes</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Dublinbikes</item>
+        
+                <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Dublinbikes.Widget</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Dublinbikes" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_dublinbikes</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_dublinbikes</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_dublinbikes</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Dublinbikes</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Dublinbikes" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_dublinbikes</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Dublinbikes</item>
+    </style>
+
+    <style name="PopupMenu.Dublinbikes" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_dublinbikes</item>	
+    </style>
+
+    <style name="DropDownListView.Dublinbikes" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_dublinbikes</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Dublinbikes" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_dublinbikes</item>
+    </style>
+
+    <style name="DropDownNav.Dublinbikes" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_dublinbikes</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_dublinbikes</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_dublinbikes</item>
+    </style>
+    
+    <style name="ProgressBar.Dublinbikes" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_dublinbikes</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Dublinbikes" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_dublinbikes</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Dublinbikes.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Dublinbikes</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Dublinbikes</item>
+    </style>
+
+    <style name="AutoCompleteTextViewDublinBikes" parent="android:Widget.Holo.Light.AutoCompleteTextView">
+        <item name="android:dropDownSelector">@drawable/dublinbikes_list_selector_holo_light</item>
+        <item name="android:background">@drawable/dublinbikes_edit_text_holo_light</item>
+    </style>
+
+    <style name="ButtonDublinBikes" parent="android:Widget.Holo.Light.Button">
+        <item name="android:background">@drawable/dublinbikes_btn_default_holo_light</item>
+    </style>
+
+    <style name="ImageButtonDublinBikes" parent="android:Widget.Holo.Light.ImageButton">
+        <item name="android:background">@drawable/dublinbikes_btn_default_holo_light</item>
+    </style>
+
+    <style name="SpinnerDublinBikes" parent="android:Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/dublinbikes_spinner_background_holo_light</item>
+        <item name="android:dropDownSelector">@drawable/dublinbikes_list_selector_holo_light</item>
+    </style>
+
+    <style name="ProgressBarDublinBikes" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/dublinbikes_progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/dublinbikes_progress_indeterminate_horizontal_holo_light</item>
+    </style>
+
+    <style name="SeekBarDublinBikes" parent="android:Widget.Holo.Light.SeekBar">
+        <item name="android:progressDrawable">@drawable/dublinbikes_scrubber_progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/dublinbikes_scrubber_progress_horizontal_holo_light</item>
+        <item name="android:thumb">@drawable/dublinbikes_scrubber_control_selector_holo_light</item>
+    </style>
+
+    <style name="RatingBarDublinBikes" parent="android:Widget.Holo.Light.RatingBar">
+        <item name="android:progressDrawable">@drawable/dublinbikes_ratingbar_full_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/dublinbikes_ratingbar_full_holo_light</item>
+    </style>
+
+    <style name="RatingBarBigDublinBikes" parent="android:Widget.Holo.Light.RatingBar.Indicator">
+        <item name="android:progressDrawable">@drawable/dublinbikes_ratingbar_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/dublinbikes_ratingbar_holo_light</item>
+    </style>
+
+    <style name="RatingBarSmallDublinBikes" parent="android:Widget.Holo.Light.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/dublinbikes_ratingbar_small_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/dublinbikes_ratingbar_small_holo_light</item>
+    </style>
+
+    <style name="ToggleDublinBikes" parent="android:Widget.Holo.Light.Button.Toggle">
+        <item name="android:background">@drawable/dublinbikes_btn_toggle_holo_light</item>
+    </style>
+
+
+</resources>

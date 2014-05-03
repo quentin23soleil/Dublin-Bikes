@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dublin Bikes</string>
+    <string name="app_name_screen">DublinBikes</string>
+    <string name="maps_api_key_debug">AIzaSyDEfPt9Q1rK7mprgOLLnU7FZNxLFha3Xgk</string>
+    <string name="maps_api_key">AIzaSyC-omFEda6h5VdizpQ7tlgXsfGs6B4ilCk</string>
+    <string name="i_want_a_bike">Prendre un vélo</string>
+    <string name="i_want_to_leave_my_bike">Poser un vélo</string>
+    <string name="show_me_map">La carte</string>
+    <string name="my_fav">Mes favoris</string>
+    <string name="station_list">Les stations</string>
+    <string name="open">Ouvrir</string>
+    <string name="close">Fermer</string>
+    <string name="about">À propos</string>
+    <string name="bikes_no">Aucun vélo</string>
+    <string name="spot_no">Aucune place</string>
+    <string name="add_to_bookmark">Favoris</string>
+    <string name="server_update">Mis à jour sur le serveur : %s</string>
+    <string name="server_update_today">Mis à jour sur le serveur : Aujourd\'hui à %s</string>
+    <string name="add_alert">Alerte</string>
+    <string name="add_alert_title">Ajouter une Alerte</string>
+    <string name="refresh">Actualiser</string>
+    <string name="notif">Trop tard. Il ne reste aucun vélo.</string>
+    <string name="move_now">Bouges toi !</string>
+    <string name="nb_bikes">Nombre de vélos minimum</string>
+    <string name="nb_bikes_f">Nombre de vélos minimum : %d</string>
+    <string name="start">Heure du début</string>
+    <string name="end">Heure de fin</string>
+    <string name="validate">Valider</string>
+    <string name="select_start">Choisir une heure de début</string>
+    <string name="select_end">Choisir une heure de fin</string>
+    <string name="fill_all">Veuillez tout remplir</string>
+    <string name="alert_success">Alerte ajoutée avec succès</string>
+    <string name="send">Envoyer</string>
+
+    <string name="monday">Lun</string>
+    <string name="tuesday">Mar</string>
+    <string name="wednesday">Mer</string>
+    <string name="thursday">Jeu</string>
+    <string name="friday">Ven</string>
+    <string name="saturday">Sam</string>
+    <string name="sunday">Dim</string>
+
+	<string name="bike_zero">\nvélo</string>
+	<string name="spot_zero">\nplace</string>
+    <string name="repeat">Répéter</string>
+    <string name="empty">Aucune station à afficher.</string>
+    <string name="add_alert_help">Ici vous pouvez ajouter une alerte pour une station. L\'heure de début et de fin c\'est pour la plage de temps de l\'alarme.\nDites moi ce que vous en pensez ;)</string>
+    <string name="sorry_services">I\'m sorry but you can\'t use Dublin Bikes without Google Play Services.</string>
+    <plurals name="notif">
+        <item quantity="one">Il reste %d vélo, vite !</item>
+        <item quantity="other">Il reste %d vélos, easy win.</item>
+    </plurals>
+    <plurals name="alerts_nb">
+        <item quantity="other"> alertes, slide vers le bas pour voir</item>
+    </plurals>
+    <plurals name="bikes">
+        <item quantity="one">%02d\nvélo</item>
+        <item quantity="few">%02d\nvélos</item>
+        <item quantity="many">%02d\nvélos</item>
+        <item quantity="other">%02d\nvélos</item>
+    </plurals>
+    <plurals name="spots">
+        <item quantity="one">%02d\nplace</item>
+        <item quantity="few">%02d\nplaces</item>
+        <item quantity="many">%02d\nplaces</item>
+        <item quantity="other">%02d\nplaces</item>
+    </plurals>
+    <plurals name="bikes_available">
+        <item quantity="one">%02d vélo dispo</item>
+        <item quantity="few">%02d vélos dispo</item>
+        <item quantity="many">%02d vélos dispo</item>
+        <item quantity="other">%02d vélos dispo</item>
+    </plurals>
+    <plurals name="free_spots">
+        <item quantity="one">%02d place dispo</item>
+        <item quantity="few">%02d places dispo</item>
+        <item quantity="many">%02d places dispo</item>
+        <item quantity="other">%02d places dispo</item>
+    </plurals>
+
+</resources>

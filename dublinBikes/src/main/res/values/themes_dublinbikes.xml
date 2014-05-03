@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="DublinBikes" parent="@style/_DublinBikes">
+      <item name="android:windowActionBarOverlay">true</item>
+
+      <item name="android:actionBarItemBackground">@drawable/selector_transparent_grey</item>
+      <item name="android:popupMenuStyle">@style/PopupMenu.Dublinbikes</item>
+      <item name="android:dropDownListViewStyle">@style/DropDownListView.Dublinbikes</item>
+      <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Dublinbikes</item>
+      <item name="android:actionDropDownStyle">@style/DropDownNav.Dublinbikes</item>
+      <item name="android:actionBarStyle">@style/ActionBar.Solid.Dublinbikes</item>
+      <item name="android:actionModeBackground">@drawable/cab_background_top_dublinbikes</item>
+      <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_dublinbikes</item>
+      <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Dublinbikes</item>
+
+      <!-- Light.DarkActionBar specific -->
+      <item name="android:actionBarWidgetTheme">@style/Theme.Dublinbikes.Widget</item>
+
+
+  </style>
+
+  <style name="_DublinBikes" parent="android:Theme.Holo.Light.DarkActionBar">
+
+    <item name="android:editTextBackground">@drawable/dublinbikes_edit_text_holo_light</item>
+
+    <item name="android:textColorHighlight">#99009933</item>
+    <item name="android:textSelectHandleLeft">@drawable/dublinbikes_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/dublinbikes_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/dublinbikes_text_select_handle_middle</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewDublinBikes</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/dublinbikes_btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/dublinbikes_btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonDublinBikes</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonDublinBikes</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerDublinBikes</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarDublinBikes</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarDublinBikes</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarDublinBikes</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigDublinBikes</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallDublinBikes</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleDublinBikes</item>
+
+    <item name="android:listChoiceBackgroundIndicator">@drawable/dublinbikes_list_selector_holo_light</item>
+
+    <item name="android:activatedBackgroundIndicator">@drawable/dublinbikes_activated_background_holo_light</item>
+
+    <item name="android:fastScrollThumbDrawable">@drawable/dublinbikes_fastscroll_thumb_holo</item>
+
+  </style>
+
+</resources>
