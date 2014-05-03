@@ -4,6 +4,7 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -286,14 +287,14 @@ public class Utils {
 
     public static void playServicesCheck(final Activity ct) {
         int error = GooglePlayServicesUtil.isGooglePlayServicesAvailable(ct);
-        GooglePlayServicesUtil.getErrorDialog(error, ct, 0, new DialogInterface.OnCancelListener() {
+        Dialog d = GooglePlayServicesUtil.getErrorDialog(error, ct, 0, new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
                 Toast.makeText(ct, ct.getString(R.string.sorry_services), Toast.LENGTH_LONG).show();
                 ct.finish();
             }
-        }).show();
-
-
+        });
+        if (d != null)
+            d.show();
     }
 }

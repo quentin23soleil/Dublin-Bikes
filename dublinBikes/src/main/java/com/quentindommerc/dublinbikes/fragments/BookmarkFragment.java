@@ -73,7 +73,7 @@ public class BookmarkFragment extends BaseFragment {
     }
 
     public void getBookmarks() {
-         updateBikesFree(bdd.getStationIds());
+        updateBikesFree(bdd.getStationIds());
     }
 
     private void updateBikesFree(String ids) {
@@ -108,7 +108,8 @@ public class BookmarkFragment extends BaseFragment {
                 b.putInt("mode", Constants.BOOKMARK_MODE);
                 ListFragment frag = new ListFragment();
                 frag.setArguments(b);
-                getChildFragmentManager().beginTransaction().replace(R.id.frame, frag).commit();
+                if (getActivity() != null)
+                    getChildFragmentManager().beginTransaction().replace(R.id.frame, frag).commit();
 
             }
 

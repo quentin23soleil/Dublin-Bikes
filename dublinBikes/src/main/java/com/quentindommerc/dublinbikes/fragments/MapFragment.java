@@ -205,6 +205,7 @@ public class MapFragment extends BaseFragment {
 
     @Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        container.removeAllViews();
         try {
             v = inflater.inflate(R.layout.f_map, container, false);
             com.google.android.gms.maps.SupportMapFragment map = (com.google.android.gms.maps.SupportMapFragment) getActivity().getSupportFragmentManager()

@@ -26,18 +26,20 @@ public class DublinBikes extends Application {
         Parse.initialize(this, "Q4YKMk5SO64YBZIiUaWI0miLtgA9GcsFP0XlrmPJ", "r88o69d5z57zQOJ52kE28V2ucie8fg8vuZFRmhGV");
         PushService.setDefaultPushCallback(this, AlertNotification.class, R.drawable.ic_cycle_notif);
         ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        Crashlytics.start(DublinBikes.this);
         if (Utils.getEmail(this) != null)
             installation.put("email", Utils.getEmail(this));
         installation.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
                 String deviceToken = (String) ParseInstallation.getCurrentInstallation().get("deviceToken");
+                Crashlytics.setString("email", Utils.getEmail(DublinBikes.this));
+                Crashlytics.setString("parseId", deviceToken);
                 if (Utils.getEmail(DublinBikes.this) != null)
                     sendRegistrationIdToBackend(deviceToken);
 
             }
         });
-        Crashlytics.start(this);
     }
 
     private void sendRegistrationIdToBackend(String token) {

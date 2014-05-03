@@ -41,7 +41,7 @@ public class Home extends BaseActivity implements FragmentManager.OnBackStackCha
     private SharedPreferences prefs;
     private DrawerAdapter mAdapter;
     private BaseFragment mFrag;
-//
+    //
 //    @Override
 //    protected void onStart() {
 //        super.onStart();
@@ -130,7 +130,6 @@ public class Home extends BaseActivity implements FragmentManager.OnBackStackCha
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
-        getActionBar().setIcon(android.R.color.transparent);
 
         prefs = getPreferences(MODE_PRIVATE);
         opened = prefs.getBoolean("opened", false);
@@ -138,7 +137,10 @@ public class Home extends BaseActivity implements FragmentManager.OnBackStackCha
             mDrawer.openDrawer(mList);
         }
 
-        mList.performItemClick(mList, 0, 0);
+        if (savedInstanceState == null)
+            mList.performItemClick(mList, 0, 0);
+        else
+            mList.performItemClick(mList, savedInstanceState.getInt("selected"), 0);
         getSupportFragmentManager().addOnBackStackChangedListener(this);
 
     }
@@ -165,6 +167,8 @@ public class Home extends BaseActivity implements FragmentManager.OnBackStackCha
     @Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putString("WORKAROUND_FOR_BUG_19917_KEY", "WORKAROUND_FOR_BUG_19917_VALUE");
+        outState.putInt("selected", mList.getSelectedItemPosition());
+        super.onSaveInstanceState(outState);
     }
 
     @Override
