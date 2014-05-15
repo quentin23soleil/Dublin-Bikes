@@ -7,14 +7,14 @@ import java.io.Serializable;
 
 public class Station implements Parcelable {
 	private String mName;
-	private int mIdx;
+	private String mIdx;
 	private String mTimestamp;
 	private int mNumber;
 	private int mFree;
 	private int mBikes;
 	private double mLatitude;
 	private double mLongitude;
-	private int mId;
+	private String mId;
 	private String mStationUrl;
 	private String mDistanceString;
 	private Float mDistanceMeter;
@@ -30,11 +30,11 @@ public class Station implements Parcelable {
 		mName = name;
 	}
 
-	public int getIdx() {
+	public String getIdx() {
 		return mIdx;
 	}
 
-	public void setIdx(int idx) {
+	public void setIdx(String idx) {
 		mIdx = idx;
 	}
 
@@ -86,11 +86,11 @@ public class Station implements Parcelable {
 		mLongitude = d;
 	}
 
-	public int getId() {
+	public String getId() {
 		return mId;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		mId = id;
 	}
 
@@ -110,14 +110,14 @@ public class Station implements Parcelable {
 
 	protected Station(Parcel in) {
 		mName = in.readString();
-		mIdx = in.readInt();
+		mIdx = in.readString();
 		mTimestamp = in.readString();
 		mNumber = in.readInt();
 		mFree = in.readInt();
 		mBikes = in.readInt();
 		mLatitude = in.readDouble();
 		mLongitude = in.readDouble();
-		mId = in.readInt();
+		mId = in.readString();
 		mStationUrl = in.readString();
 		mDistanceString = in.readString();
 		mDistanceMeter = in.readFloat();
@@ -135,14 +135,14 @@ public class Station implements Parcelable {
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeString(mName);
-		dest.writeInt(mIdx);
+		dest.writeString(mIdx);
 		dest.writeString(mTimestamp);
 		dest.writeInt(mNumber);
 		dest.writeInt(mFree);
 		dest.writeInt(mBikes);
 		dest.writeDouble(mLatitude);
 		dest.writeDouble(mLongitude);
-		dest.writeInt(mId);
+		dest.writeString(mId);
 		dest.writeString(mStationUrl);
 		dest.writeString(mDistanceString);
 		if (mDistanceMeter != null)

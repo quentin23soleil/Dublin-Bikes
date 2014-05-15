@@ -8,11 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class Sqlite extends SQLiteOpenHelper {
 
 	private static final String table_name = "Bookmark_stations";
-	private static final String COL_LAT = "lat";
+	private static final String COL_LAT = "latitude";
 	private static final String COL_ID = "id";
 	private static final String COL_NAME = "name";
 	private static final String COL_IDX = "idx";
-	private static final String COL_LNG = "lng";
+	private static final String COL_LNG = "longitude";
 	private final static String CREATE_BDD = "CREATE TABLE " + table_name
 			+ " (" + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_NAME
 			+ " varchar(255), " + COL_IDX + " INTEGER, " + COL_LAT

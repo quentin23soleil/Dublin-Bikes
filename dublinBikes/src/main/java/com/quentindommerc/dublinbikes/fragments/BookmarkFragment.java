@@ -96,8 +96,8 @@ public class BookmarkFragment extends BaseFragment {
                         s.setTimestamp(obj.getString("timestamp"));
                         s.setLatitude(obj.getDouble("lat") / 1000000);
                         s.setLongitude(obj.getDouble("lng") / 1000000);
-                        s.setId(obj.getInt("idx"));
-                        s.setIdx(obj.getInt("idx"));
+                        s.setId(obj.optString("idx"));
+//                        s.setIdx(obj.getInt("idx"));
                         stations.add(s);
                     }
                 } catch (JSONException e) {

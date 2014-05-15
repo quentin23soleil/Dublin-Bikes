@@ -97,9 +97,9 @@ public class DetailStation extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.alert:
-                addAlert(null);
-                break;
+//            case R.id.alert:
+//                addAlert(null);
+//                break;
             case R.id.refresh:
                 refresh();
                 break;

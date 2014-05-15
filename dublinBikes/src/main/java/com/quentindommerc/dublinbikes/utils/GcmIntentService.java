@@ -64,8 +64,8 @@ public class GcmIntentService extends IntentService {
 					JSONObject obj = new JSONObject(extras.getString("message"));
 					station.setName(obj.optString("name"));
 					station.setTimestamp(obj.optString("timestamp"));
-					station.setId(obj.optInt("id"));
-					station.setIdx(obj.optInt("idx"));
+					station.setId(obj.optString("id"));
+					station.setIdx(obj.optString("idx"));
 					station.setBikes(obj.optInt("bikes"));
 					station.setFree(obj.optInt("free"));
 					station.setLatitude(obj.optDouble("lat") / 1000000);

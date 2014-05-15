@@ -97,7 +97,7 @@ public class MapFragment extends BaseFragment {
 						s.setBikes(stationJson.optInt("bikes"));
 						s.setLatitude(stationJson.optDouble("lat") / 1000000);
 						s.setLongitude(stationJson.optDouble("lng") / 1000000);
-						s.setId(stationJson.optInt("id"));
+						s.setId(stationJson.optString("id"));
 						s.setStationUrl(stationJson.optString("station_url"));
 						if ((mode == Constants.LEAVE_BIKE_MODE && s.getFree() > 0)
 								|| (mode == Constants.WANT_BIKE_MODE && s.getBikes() > 0)

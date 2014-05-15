@@ -12,17 +12,17 @@ import com.quentindommerc.dublinbikes.utils.Utils;
 
 public class BookmarkBdd {
 
-	private static final int VERSION_BDD = 2;
-	private static final String BDD_NAME = "bookmark.db";
+	private static final int VERSION_BDD = 4;
+	private static final String BDD_NAME = "Bookmark.db";
 
 	private static final String table_name = "Bookmark_stations";
 	private static final String COL_NAME = "name";
 	private static final int NUM_COL_NAME = 0;
 	private static final String COL_IDX = "idx";
 	private static final int NUM_COL_IDX = 1;
-	private static final String COL_LAT = "lat";
+	private static final String COL_LAT = "latitude";
 	private static final int NUM_COL_LAT = 2;
-	private static final String COL_LNG = "lng";
+	private static final String COL_LNG = "longitude";
 	private static final int NUM_COL_LNG = 3;
 
 	private SQLiteDatabase bdd;
@@ -47,10 +47,10 @@ public class BookmarkBdd {
 	public long addBookmark(Station s) {
 		ContentValues values = new ContentValues();
 		values.put(COL_NAME, s.getName());
-		values.put(COL_IDX, s.getIdx());
+		values.put(COL_IDX, s.getId());
 		values.put(COL_LAT, s.getLatitude());
 		values.put(COL_LNG, s.getLongitude());
-        Utils.log(String.valueOf(s.getId() + " | " + s.getIdx()));
+        Utils.log(String.valueOf(s.getId() + " | " + s.getId()));
 		return bdd.insert(table_name, null, values);
 	}
 
@@ -67,7 +67,7 @@ public class BookmarkBdd {
 			return s;
 		c.moveToFirst();
 		s.setName(c.getString(NUM_COL_NAME));
-		s.setId(c.getInt(NUM_COL_IDX));
+		s.setId(c.getString(NUM_COL_IDX));
 		s.setLatitude(c.getDouble(NUM_COL_LAT));
 		s.setLongitude(c.getDouble(NUM_COL_LNG));
 		c.close();
@@ -76,7 +76,7 @@ public class BookmarkBdd {
 
 	public boolean isBookmark(Station s) {
 		Cursor c = bdd.query(table_name, new String[] { COL_NAME, COL_IDX, COL_LAT, COL_LNG },
-				COL_IDX + " = " + (s.getId()), null, null, null, null);
+				COL_IDX + " = \"" + (s.getId()) + "\"", null, null, null, null);
 		if (c.getCount() == 0)
 			return false;
 		return true;
@@ -127,10 +127,10 @@ public class BookmarkBdd {
 			return null;
 		c.moveToFirst();
 		while (!c.isLast()) {
-			ids += (Integer.parseInt(c.getString(NUM_COL_IDX)) + 0) + ",";
+			ids += c.getString(NUM_COL_IDX) + ",";
 			c.moveToNext();
 		}
-		ids += (Integer.parseInt(c.getString(NUM_COL_IDX)) + 0);
+        ids += c.getString(NUM_COL_IDX) + ",";
 		return ids;
 	}
 }

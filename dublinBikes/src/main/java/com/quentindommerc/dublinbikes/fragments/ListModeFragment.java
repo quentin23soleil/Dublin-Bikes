@@ -82,7 +82,7 @@ public class ListModeFragment extends BaseFragment {
                         s.setBikes(stationJson.optInt("bikes"));
                         s.setLatitude(stationJson.optDouble("lat") / 1000000);
                         s.setLongitude(stationJson.optDouble("lng") / 1000000);
-                        s.setId(stationJson.optInt("id"));
+                        s.setId(stationJson.optString("id"));
                         s.setStationUrl(stationJson.optString("station_url"));
                         stations.add(s);
                     }

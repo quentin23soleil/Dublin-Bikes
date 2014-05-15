@@ -84,11 +84,11 @@ public class LeaveMyBikeFragment extends BaseFragment {
                         s.setName(stationJson.optString("name"));
                         s.setTimestamp(stationJson.optString("timestamp"));
                         s.setNumber(stationJson.optInt("number"));
-                        s.setFree(stationJson.optInt("free"));
-                        s.setBikes(stationJson.optInt("bikes"));
-                        s.setLatitude(stationJson.optDouble("lat") / 1000000);
-                        s.setLongitude(stationJson.optDouble("lng") / 1000000);
-                        s.setId(stationJson.optInt("id"));
+                        s.setFree(stationJson.optInt("empty_slots"));
+                        s.setBikes(stationJson.optInt("free_bikes"));
+                        s.setLatitude(stationJson.optDouble("latitude") / 1000000);
+                        s.setLongitude(stationJson.optDouble("longitude") / 1000000);
+                        s.setId(stationJson.optString("id"));
                         s.setStationUrl(stationJson.optString("station_url"));
                         stations.add(s);
                     }

@@ -52,11 +52,16 @@ public class ListFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         if (clean) {
             updateAdapter(Utils.updateStationsAdpater(location, mAdapter, getActivity()));
         }
-        if (mList != null && mAdapter != null) {
-            mList.setAdapter(mAdapter);
-        }
-        if (mList != null && mList.getSwipeToRefresh() != null || (mAdapter != null && mAdapter.getCount() == 0))
-            mList.getSwipeToRefresh().setRefreshing(false);
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (mList != null && mAdapter != null) {
+                    mList.setAdapter(mAdapter);
+                }
+                if (mList != null && mList.getSwipeToRefresh() != null || (mAdapter != null && mAdapter.getCount() == 0))
+                    mList.getSwipeToRefresh().setRefreshing(false);
+            }
+        });
     }
 
     @Override
@@ -122,20 +127,25 @@ public class ListFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         stations = args.getParcelableArrayList("stations");
         mode = args.getInt("mode");
 
-        if (stations != null) {
-            for (int i = 0; i < stations.size(); i++) {
-                if (stations.get(i).getFree() == 0 && mode == Constants.LEAVE_BIKE_MODE) {
-                    stations.remove(i);
-                } else if (stations.get(i).getBikes() == 0 && mode == Constants.WANT_BIKE_MODE) {
-                    stations.remove(i);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if (stations != null) {
+                    for (int i = 0; i < stations.size(); i++) {
+                        if (stations.get(i).getFree() == 0 && mode == Constants.LEAVE_BIKE_MODE) {
+                            stations.remove(i);
+                        } else if (stations.get(i).getBikes() == 0 && mode == Constants.WANT_BIKE_MODE) {
+                            stations.remove(i);
+                        } else {
+                        }
+                        updateList(false);
+                    }
                 } else {
+                    stations = new ArrayList<Station>();
+                    mode = Constants.LIST_MODE;
                 }
-                updateList(false);
             }
-        } else {
-            stations = new ArrayList<Station>();
-            mode = Constants.LIST_MODE;
-        }
+        }).start();
     }
 
     private void tracker(String s) {
@@ -166,6 +176,7 @@ public class ListFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         String url = "dublin.json";
         if (mode == Constants.BOOKMARK_MODE)
             url = "dublin.php?method=getWithIdxs&idxs=" + bdd.getStationIds();
+        Utils.log(url);
         api.execute(url, null, new OnApiFinished() {
 
             @Override
@@ -178,15 +189,15 @@ public class ListFragment extends BaseFragment implements SwipeRefreshLayout.OnR
                         s.setName(stationJson.optString("name"));
                         s.setTimestamp(stationJson.optString("timestamp"));
                         s.setNumber(stationJson.optInt("number"));
-                        s.setFree(stationJson.optInt("free"));
-                        s.setBikes(stationJson.optInt("bikes"));
-                        s.setLatitude(stationJson.optDouble("lat") / 1000000);
-                        s.setLongitude(stationJson.optDouble("lng") / 1000000);
+                        s.setFree(stationJson.optInt("empty_slots"));
+                        s.setBikes(stationJson.optInt("free_bikes"));
+                        s.setLatitude(stationJson.optDouble("latitude"));
+                        s.setLongitude(stationJson.optDouble("longitude"));
                         if (mode == Constants.BOOKMARK_MODE)
-                            s.setId(stationJson.optInt("idx"));
+                            s.setId(stationJson.optString("idx"));
                         else
-                            s.setId(stationJson.optInt("id"));
-                        s.setIdx(stationJson.optInt("idx"));
+                            s.setId(stationJson.optString("id"));
+                        s.setIdx(stationJson.optString("idx"));
                         s.setStationUrl(stationJson.optString("station_url"));
                         if ((mode == Constants.LEAVE_BIKE_MODE && s.getFree() > 0)
                                 || (mode == Constants.WANT_BIKE_MODE && s.getBikes() > 0)

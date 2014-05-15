@@ -41,20 +41,8 @@ public class Home extends BaseActivity implements FragmentManager.OnBackStackCha
     private SharedPreferences prefs;
     private DrawerAdapter mAdapter;
     private BaseFragment mFrag;
-    //
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        EasyTracker.getInstance(this).activityStart(this);
-//    }
-//
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-//
-//        EasyTracker.getInstance(this).activityStop(this);
-//    }
-//
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,7 +104,8 @@ public class Home extends BaseActivity implements FragmentManager.OnBackStackCha
                         editor.apply();
                     }
                 }
-                getActionBar().setTitle(mFrag.getTitle());
+                if (mFrag != null)
+                    getActionBar().setTitle(mFrag.getTitle());
             }
 
             @Override
