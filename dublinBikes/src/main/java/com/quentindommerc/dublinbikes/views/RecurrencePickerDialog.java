@@ -294,7 +294,7 @@ public class RecurrencePickerDialog extends DialogFragment implements OnItemSele
     private String mEndCountLabel;
 
     /**
-     * Hold toggle buttons in the order per user's first day of week preference
+     * Hold toggle buttons in the order per user's mFirst day of week preference
      */
     private LinearLayout mWeekGroup;
     private LinearLayout mWeekGroup2;
@@ -302,7 +302,7 @@ public class RecurrencePickerDialog extends DialogFragment implements OnItemSele
     private ToggleButton[] mWeekByDayButtons = new ToggleButton[7];
     /**
      * A double array of Strings to hold the 7x5 list of possible strings of the form: "on every [Nth] [DAY_OF_WEEK]",
-     * e.g. "on every second Monday", where [Nth] can be [first, second, third, fourth, last]
+     * e.g. "on every second Monday", where [Nth] can be [mFirst, second, third, fourth, last]
      */
     private String[][] mMonthRepeatByDayOfWeekStrs;
 
@@ -739,7 +739,7 @@ public class RecurrencePickerDialog extends DialogFragment implements OnItemSele
         int numOfButtonsInRow2;
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB_MR2) {
-            // Get screen width in dp first
+            // Get screen width in dp mFirst
             Display display = getActivity().getWindowManager().getDefaultDisplay();
             DisplayMetrics outMetrics = new DisplayMetrics();
             display.getMetrics(outMetrics);

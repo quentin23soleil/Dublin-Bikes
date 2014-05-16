@@ -89,9 +89,9 @@ public class EventRecurrenceFormatter
                     string = days.toString();
                 } else {
                     // There is no "BYDAY" specifier, so use the day of the
-                    // first event.  For this to work, the setStartDate()
+                    // mFirst event.  For this to work, the setStartDate()
                     // method must have been used by the caller to set the
-                    // date of the first event in the recurrence.
+                    // date of the mFirst event in the recurrence.
                     if (recurrence.startDate == null) {
                         return null;
                     }

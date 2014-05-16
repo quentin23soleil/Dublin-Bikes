@@ -36,7 +36,7 @@ public class Home extends BaseActivity implements FragmentManager.OnBackStackCha
     private DrawerLayout mDrawer;
     private ListView mList;
     private ActionBarDrawerToggle drawerToggle;
-    private int oldSelection;
+    private int oldSelection = -1;
     protected boolean opened;
     private SharedPreferences prefs;
     private DrawerAdapter mAdapter;
@@ -50,14 +50,15 @@ public class Home extends BaseActivity implements FragmentManager.OnBackStackCha
 
         AppRate.with(this).initialLaunchCount(3).retryPolicy(RetryPolicy.INCREMENTAL)
                 .checkAndShow();
-
-
         Utils.playServicesCheck(this);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         mList = (ListView) findViewById(R.id.left_drawer);
 
-        oldSelection = -1;
+        setupMenu(savedInstanceState);
+    }
+
+    private void setupMenu(Bundle savedInstanceState) {
         mAdapter = new DrawerAdapter(this);
         mAdapter.add(new MenuItem(getString(R.string.station_list), R.drawable.ic_list));
         mAdapter.add(new MenuItem(getString(R.string.show_me_map), R.drawable.ic_map));

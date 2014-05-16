@@ -3,7 +3,10 @@ package com.quentindommerc.dublinbikes.utils;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.quentindommerc.dublinbikes.bean.Station;
 import com.quentindommerc.dublinbikes.interfaces.OnApiFinished;
+
+import org.json.JSONObject;
 
 public class Api {
 
@@ -37,4 +40,21 @@ public class Api {
 		});
 	}
 
+    public static Station parseStation(JSONObject stationJson, int mode) {
+        Station s = new Station();
+        s.setName(stationJson.optString("name"));
+        s.setTimestamp(stationJson.optString("timestamp"));
+        s.setNumber(stationJson.optInt("number"));
+        s.setFree(stationJson.optInt("empty_slots"));
+        s.setBikes(stationJson.optInt("free_bikes"));
+        s.setLatitude(stationJson.optDouble("latitude"));
+        s.setLongitude(stationJson.optDouble("longitude"));
+        if (mode == Constants.BOOKMARK_MODE)
+            s.setId(stationJson.optString("idx"));
+        else
+            s.setId(stationJson.optString("id"));
+        s.setIdx(stationJson.optString("idx"));
+        s.setStationUrl(stationJson.optString("station_url"));
+        return s;
+    }
 }

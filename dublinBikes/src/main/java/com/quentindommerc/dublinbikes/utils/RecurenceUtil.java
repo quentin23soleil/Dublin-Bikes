@@ -29,18 +29,18 @@ public class RecurenceUtil {
     public static final int YEAR_MAX = 2036;
 
     /**
-     * Get first day of week as android.text.format.Time constant.
+     * Get mFirst day of week as android.text.format.Time constant.
      *
-     * @return the first day of week in android.text.format.Time
+     * @return the mFirst day of week in android.text.format.Time
      */
     public static int getFirstDayOfWeek(Context context) {
         return Time.MONDAY;
     }
 
     /**
-     * Get first day of week as java.util.Calendar constant.
+     * Get mFirst day of week as java.util.Calendar constant.
      *
-     * @return the first day of week as a java.util.Calendar constant
+     * @return the mFirst day of week as a java.util.Calendar constant
      */
     public static int getFirstDayOfWeekAsCalendar(Context context) {
         return convertDayOfWeekFromTimeToCalendar(getFirstDayOfWeek(context));

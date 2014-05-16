@@ -47,8 +47,6 @@ public class ListFragment extends BaseFragment implements SwipeRefreshLayout.OnR
     private StationListAdapter mAdapter;
 
     private void updateList(boolean clean) {
-
-
         if (clean) {
             updateAdapter(Utils.updateStationsAdpater(location, mAdapter, getActivity()));
         }
@@ -185,24 +183,8 @@ public class ListFragment extends BaseFragment implements SwipeRefreshLayout.OnR
                     JSONArray array = new JSONArray(json);
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject stationJson = array.optJSONObject(i);
-                        Station s = new Station();
-                        s.setName(stationJson.optString("name"));
-                        s.setTimestamp(stationJson.optString("timestamp"));
-                        s.setNumber(stationJson.optInt("number"));
-                        s.setFree(stationJson.optInt("empty_slots"));
-                        s.setBikes(stationJson.optInt("free_bikes"));
-                        s.setLatitude(stationJson.optDouble("latitude"));
-                        s.setLongitude(stationJson.optDouble("longitude"));
-                        if (mode == Constants.BOOKMARK_MODE)
-                            s.setId(stationJson.optString("idx"));
-                        else
-                            s.setId(stationJson.optString("id"));
-                        s.setIdx(stationJson.optString("idx"));
-                        s.setStationUrl(stationJson.optString("station_url"));
-                        if ((mode == Constants.LEAVE_BIKE_MODE && s.getFree() > 0)
-                                || (mode == Constants.WANT_BIKE_MODE && s.getBikes() > 0)
-                                || (mode == Constants.LIST_MODE) || (mode == Constants.BOOKMARK_MODE)) {
-//                            Utils.log(mode + " " + s.getBikes());
+                        Station s = Api.parseStation(stationJson, mode);
+                        if ((mode == Constants.LIST_MODE) || (mode == Constants.BOOKMARK_MODE)) {
                             stations.add(s);
                         }
                     }
